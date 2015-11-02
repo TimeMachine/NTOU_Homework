@@ -1,0 +1,23 @@
+# this is a comment
+# non terminals
+non-term: E
+non-term: T
+non-term: F
+# terminals
+term: *
+term: +
+term: (
+term: )
+term: id
+# productions
+prod: E : E + T
+prod: E : T
+prod: T : T * F
+prod: T : F
+prod: F : ( E )
+prod: F : id
+# the start symbol
+start: E
+# test cases
+id + id
+id * * id
